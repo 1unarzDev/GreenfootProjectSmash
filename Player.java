@@ -28,16 +28,4 @@ public class Player extends Actor
     public void jump(){
         velocity = -20;
     }
-
-    private void moveLeft(){
-        if(Greenfoot.isKeyDown("a")){
-            setLocation(getX()-1,getY());
-        }
-    }
-
-    private void moveRight(){
-        if(Greenfoot.isKeyDown("d")){
-            setLocation(getX()+1,getY());
-        }
-    }
 }

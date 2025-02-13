@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Infinity extends Domain
+public class Shrine extends Level
 {
-    public Infinity()
+    public Shrine()
     {    
-        
+
     }
 }

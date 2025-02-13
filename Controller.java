@@ -1,19 +1,26 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Controller here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Controller extends Actor
 {
-    /**
-     * Act - do whatever the Controller wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
-    {
-        // Add your action code here.
+    private Player player;
+    
+    public Controller(Player player){
+        this.player = player;
+    }
+    
+    public void act(){
+        
+    }
+    
+    private void moveLeft(){
+        if(Greenfoot.isKeyDown("a")){
+            setLocation(getX() - 1,getY());
+        }
+    }
+
+    private void moveRight(){
+        if(Greenfoot.isKeyDown("d")){
+            setLocation(getX() + 1,getY());
+        }
     }
 }
