@@ -1,19 +1,24 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class Bchan here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Bchan extends Player
+public class Bryan extends Player
 {
-    /**
-     * Act - do whatever the Bchan wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act()
+    {   
+        super.fall();
+        super.moveRight();
+        super.moveLeft();
+
+        if (Greenfoot.isKeyDown("w")&&(canJump<=0)){
+            jump();
+            canJump = 50;
+        }
+        canJump = canJump-1;
+    }
+
+    public Bryan(int health, int ultimateCharge)
     {
-        // Add your action code here.
+        this.health = health;
+        this.ultimageCharge = ultimateCharge;
+        canJump = 0;
     }
 }

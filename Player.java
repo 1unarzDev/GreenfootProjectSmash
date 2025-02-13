@@ -1,19 +1,49 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Player here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import greenfoot.*;
 public class Player extends Actor
 {
-    /**
-     * Act - do whatever the Player wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int GRAVITY = 1;
+    private final int ULT_GAIN_SMALL = 5;
+    private final int ULT_GAIN_LARGE = 10;
+    private int MOVE_SPEED = 5;
+    private int PLAYER_HEIGHT = 300;
+    private int PLAYER_WIDTH = 100;
+    private final int GRAVITY = 1;
+    private int CAN_JUMP = 0;
+    private int VELOCITY
+
     public void act()
     {
-        // Add your action code here.
+        
+    }
+
+    public void fall(){
+        setLocation(getX(),getY() + velocity);
+        if(getY()> getWorld().getHeight() - 50){
+            velocity = 0;
+        }
+        else{
+            velocity += GRAVITY;
+        }
+    }
+
+    public void jump(){
+        velocity = -20;
+    }
+
+    private void moveLeft(){
+        if(Greenfoot.isKeyDown("a")){
+            setLocation(getX()-1,getY());
+        }
+    }
+
+    private void moveRight(){
+        if(Greenfoot.isKeyDown("d")){
+            setLocation(getX()+1,getY());
+        }
+    }
+
+    public void act()
+    {
+        
     }
 }
