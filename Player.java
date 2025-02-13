@@ -1,15 +1,14 @@
 import greenfoot.*;
 public class Player extends Actor
 {
-    private int GRAVITY = 1;
     private final int ULT_GAIN_SMALL = 5;
     private final int ULT_GAIN_LARGE = 10;
-    private int MOVE_SPEED = 5;
-    private int PLAYER_HEIGHT = 300;
-    private int PLAYER_WIDTH = 100;
-    private final int GRAVITY = 1;
-    private int CAN_JUMP = 0;
-    private int VELOCITY
+    private final int MOVE_SPEED = 5;
+    private final int PLAYER_HEIGHT = 300;
+    private final int PLAYER_WIDTH = 100;
+    private final int CAN_JUMP = 0;
+    private final double GRAVITY = 1;
+    private int velocity;
 
     public void act()
     {
@@ -40,10 +39,5 @@ public class Player extends Actor
         if(Greenfoot.isKeyDown("d")){
             setLocation(getX()+1,getY());
         }
-    }
-
-    public void act()
-    {
-        
     }
 }
