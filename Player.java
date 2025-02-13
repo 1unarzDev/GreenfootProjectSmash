@@ -6,9 +6,9 @@ public class Player extends Actor
     private final int MOVE_SPEED = 5;
     private final int PLAYER_HEIGHT = 300;
     private final int PLAYER_WIDTH = 100;
-    private final int CAN_JUMP = 0;
     private final double GRAVITY = 1;
     private int velocity;
+    private final int jumpTimer = 0;
 
     public void act()
     {
