@@ -4,12 +4,14 @@ public class MalevolentShrine extends Domain
 {
     public MalevolentShrine()
     {    
-        Paul paul_player = new Paul(100, 0);
-        Hitbox paul_hb = new Hitbox(paul_player);
+        Paul paulPlayer = new Paul(100, 0);
+        Hitbox paulHB = new Hitbox(paulPlayer);
+        
+        super.addObject(paulPlayer, 0, 0);
+        super.addObject(paulHB, 0, 0);
         
         GreenfootImage bg = new GreenfootImage("malevolentShrine.jpg");
-        
-        super.addObject(paul_player, 0, 0);
-        super.addObject(paul_hb, 0, 0);
+        bg.scale(this.getWidth(), this.getHeight());
+        setBackground(bg);
     }
 }

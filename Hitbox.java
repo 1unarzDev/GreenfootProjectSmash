@@ -9,10 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hitbox extends Actor
 {
     public Hitbox(Player player){
-        GreenfootImage Hitbox = getImage(   );
-        Hitbox.scale(player.getImage().getHeight(), player.getImage().getHeight());
-        setImage(Hitbox);
+        GreenfootImage hbShape = new GreenfootImage("hitbox.png");
+        hbShape.setTransparency(0);
+        hbShape.scale(player.getImage().getWidth(), player.getImage().getHeight());
+        setImage(hbShape);
     }
+    
     public void act()
     {
         
