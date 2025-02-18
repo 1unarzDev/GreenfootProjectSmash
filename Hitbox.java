@@ -19,4 +19,12 @@ public class Hitbox extends Actor
     {
         
     }
+
+    public boolean checkProjectileCollision(){
+        if(isTouching(Attack.class)){
+            System.out.print("Hit");
+            return true;
+        }
+        return false;
+    }
 }
