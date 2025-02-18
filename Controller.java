@@ -9,7 +9,9 @@ public class Controller extends Actor
     }
     
     public void act(){
-        
+        moveLeft();
+        moveRight();
+        jump();
     }
     
     private void moveLeft(){
@@ -22,5 +24,13 @@ public class Controller extends Actor
         if(Greenfoot.isKeyDown("d")){
             setLocation(getX() + 1,getY());
         }
+    }
+    
+    private void jump(){
+        if (Greenfoot.isKeyDown("w")&&(player.canJump <= 0)){
+            jump();
+            player.canJump = 50;
+        }
+        player.canJump = player.canJump-1;
     }
 }
